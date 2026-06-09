@@ -142,3 +142,23 @@
   opacity: 0.9;
   transform: translateY(-1px);
 }
+
+@media (max-width: 500px) {
+  .card {
+    padding: 28px 20px;
+    border-radius: 24px;
+  }
+
+  .topName {
+    font-size: 24px;
+  }
+
+  .image {
+    height: 160px !important;
+  }
+
+  .retake {
+    font-size: 15px;
+    padding: 13px;
+  }
+}

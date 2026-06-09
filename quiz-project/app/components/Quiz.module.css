@@ -107,3 +107,29 @@
   font-size: 22px;
   flex-shrink: 0;
 }
+
+@media (max-width: 500px) {
+  .card {
+    padding: 28px 20px;
+    border-radius: 24px;
+  }
+
+  .question {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .answer {
+    font-size: 14px;
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .emoji {
+    font-size: 20px;
+  }
+
+  .answers {
+    gap: 10px;
+  }
+}
