@@ -101,14 +101,30 @@ Define requirements before building. Lock them in a `REQUIREMENTS.md` with quest
 
 ## Things to Remember
 
-1. **Always `.gitignore` before first commit** — `.next/` and `node_modules/` will bloat your repo if staged accidentally
-2. **`--resume` only works mid-execution** — if a session ended normally, just start fresh and describe where you left off
-3. **Agents for volume, sub-agents for wisdom** — parallel processing vs. persistent perspectives
-4. **CLAUDE.md is your memory** — write context once, never re-explain again
-5. **The `key` prop trick** — changing `key` on a React element remounts it and replays CSS animations
-6. **Never expose tokens in chat** — revoke any Personal Access Tokens shared in a conversation immediately
-7. **`vercel --yes`** deploys with all defaults — no interactive prompts needed
-8. **CSS `fill` on Next.js `<Image>`** requires an explicit height on the parent, or use `width`/`height` props directly
+1. **Always `.gitignore` before first commit**
+When you have a Next.js project, there are two folders (`.next/` and `node_modules/`) that are huge and auto-generated — you never need to save them to GitHub. If you don't tell Git to ignore them before your first commit, they'll get uploaded and clutter your repo. Always create the `.gitignore` file first.
+
+2. **`--resume` only works mid-execution**
+The `/resume` command in Claude Code is only for picking up a session that was interrupted while Claude was doing something. If you just closed the chat normally, resume won't work — just start a new session and tell Claude what you were working on.
+
+3. **Agents for volume, sub-agents for wisdom**
+- Need to process 50 files at once? → Use **agents** (parallel workers, quantity)
+- Need thoughtful feedback from different perspectives? → Use **sub-agents** (permanent personas like exec, designer, barista)
+
+4. **CLAUDE.md is your memory**
+Claude forgets everything when you close a session. CLAUDE.md is a file it reads automatically every time — so you write your project context once and never have to explain it again.
+
+5. **The `key` prop trick**
+In React, if you put `key={current}` on an element and the number changes, React treats it as a brand new element and replays any animations on it. That's how we made questions slide in each time.
+
+6. **Never expose tokens in chat**
+A GitHub Personal Access Token is like a password — if you paste it somewhere others can see it, go revoke it immediately in GitHub settings and generate a new one.
+
+7. **`vercel --yes` skips all questions**
+Normally Vercel asks you a bunch of setup questions. Adding `--yes` just accepts all the defaults and deploys immediately.
+
+8. **Next.js Image needs a size**
+The `<Image>` component in Next.js won't display unless you tell it how big to be. Either set `width` and `height` directly on it, or if using `fill`, make sure the parent container has a fixed height in CSS.
 
 ---
 
