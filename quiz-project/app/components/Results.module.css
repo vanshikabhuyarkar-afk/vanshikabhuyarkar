@@ -1,0 +1,144 @@
+.card {
+  background: white;
+  border-radius: 32px;
+  padding: 40px;
+  max-width: 560px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ff6b9d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.topName {
+  font-size: 28px;
+  font-weight: 900;
+  color: #2d2d2d;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.tagline {
+  font-size: 15px;
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.image {
+  width: 100% !important;
+  height: 200px !important;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.coffeeLabel {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+  backdrop-filter: blur(4px);
+}
+
+.breakdown {
+  margin-bottom: 28px;
+}
+
+.breakdownTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.row {
+  margin-bottom: 14px;
+}
+
+.rowMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.rowEmoji {
+  font-size: 16px;
+}
+
+.rowName {
+  font-size: 14px;
+  font-weight: 700;
+  color: #555;
+  flex: 1;
+}
+
+.rowNameTop {
+  color: #2d2d2d;
+  font-size: 15px;
+}
+
+.rowPct {
+  font-size: 14px;
+  font-weight: 800;
+  color: #2d2d2d;
+}
+
+.barTrack {
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.8s ease;
+}
+
+.retake {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #ff6b9d, #ff8c69);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.retake:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
