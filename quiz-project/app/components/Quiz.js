@@ -96,21 +96,23 @@ export default function Quiz() {
         ))}
       </div>
 
-      <p className={styles.counter}>Question {current + 1} of {questions.length}</p>
-      <h2 className={styles.question}>{question.text}</h2>
+      <div key={current} className={styles.slide}>
+        <p className={styles.counter}>Question {current + 1} of {questions.length}</p>
+        <h2 className={styles.question}>{question.text}</h2>
 
-      <div className={styles.answers}>
-        {question.answers.map((answer) => (
-          <button
-            key={answer.personality}
-            className={`${styles.answer} ${selected === answer.personality ? styles.answerSelected : ""}`}
-            onClick={() => handleAnswer(answer.personality)}
-            disabled={selected !== null}
-          >
-            <span className={styles.emoji}>{answer.emoji}</span>
-            <span>{answer.text}</span>
-          </button>
-        ))}
+        <div className={styles.answers}>
+          {question.answers.map((answer) => (
+            <button
+              key={answer.personality}
+              className={`${styles.answer} ${selected === answer.personality ? styles.answerSelected : ""}`}
+              onClick={() => handleAnswer(answer.personality)}
+              disabled={selected !== null}
+            >
+              <span className={styles.emoji}>{answer.emoji}</span>
+              <span>{answer.text}</span>
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
